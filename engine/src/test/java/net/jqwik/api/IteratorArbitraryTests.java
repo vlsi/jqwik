@@ -1,11 +1,12 @@
 package net.jqwik.api;
 
+import java.util.ArrayList;
 import java.util.*;
-import java.util.stream.*;
 
 import net.jqwik.api.arbitraries.*;
 import net.jqwik.api.constraints.*;
 import net.jqwik.api.statistics.*;
+import net.jqwik.api.support.*;
 
 import static java.util.Arrays.*;
 import static org.assertj.core.api.Assertions.*;
@@ -89,7 +90,7 @@ class IteratorArbitraryTests {
 							 while (iterator.hasNext()) { list.add(iterator.next()); }
 							 return list;
 						 })
-						 .collect(Collectors.toSet());
+						 .collect(CollectorsSupport.toLinkedHashSet());
 		assertThat(lists).containsExactlyInAnyOrder(
 				Collections.emptyList(),
 				Collections.singletonList(-10),

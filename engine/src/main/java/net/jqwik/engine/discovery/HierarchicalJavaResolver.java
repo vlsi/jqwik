@@ -6,6 +6,7 @@ import java.util.concurrent.*;
 import java.util.function.*;
 import java.util.logging.*;
 
+import net.jqwik.api.support.*;
 import org.junit.platform.engine.*;
 
 import net.jqwik.api.support.*;

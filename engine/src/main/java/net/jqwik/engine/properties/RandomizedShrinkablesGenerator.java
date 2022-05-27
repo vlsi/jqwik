@@ -7,6 +7,7 @@ import java.util.stream.*;
 import net.jqwik.api.*;
 import net.jqwik.api.support.*;
 import net.jqwik.engine.*;
+import net.jqwik.api.support.*;
 import net.jqwik.engine.properties.arbitraries.*;
 import net.jqwik.engine.support.*;
 import net.jqwik.engine.support.types.*;

@@ -5,6 +5,7 @@ import java.util.function.*;
 import java.util.stream.*;
 
 import net.jqwik.api.*;
+import net.jqwik.api.support.*;
 
 import static java.util.Arrays.*;
 
@@ -190,7 +191,7 @@ class UniqueElementsProperties {
 	}
 
 	private <T> boolean hasNoDuplicates(Collection<T> collection, Function<T, Object> by) {
-		Set<Object> set = collection.stream().map(by).collect(Collectors.toSet());
+		Set<Object> set = collection.stream().map(by).collect(CollectorsSupport.toLinkedHashSet());
 		return set.size() == collection.size();
 	}
 }
