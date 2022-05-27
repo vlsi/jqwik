@@ -108,7 +108,7 @@ class IteratorArbitraryTests {
 	}
 
 	private boolean isUniqueModulo(Iterator<Integer> iterator, int modulo) {
-		Set<Integer> moduloSet = new HashSet<>();
+		Set<Integer> moduloSet = new LinkedHashSet<>();
 		int count = 0;
 		while (iterator.hasNext()) {
 			count++;
@@ -212,7 +212,7 @@ class IteratorArbitraryTests {
 	}
 
 	private void assertGeneratedIterator(Shrinkable<Iterator<Integer>> shrinkable) {
-		Set<Integer> set = new HashSet<>();
+		Set<Integer> set = new LinkedHashSet<>();
 		Iterator<Integer> iterator = shrinkable.value();
 		while (iterator.hasNext()) {
 			set.add(iterator.next());
