@@ -4,7 +4,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - nc-main
   pull_request:
     branches:
       - '*'
